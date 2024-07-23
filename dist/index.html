@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=600" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maramura Rich Media Display</title>
+    <link rel="stylesheet" href="/dist/styles.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <div class="block banner-background"></div>
+
+      <!-- Contenedor de elementos detras del scratch / contenido revelado -->
+      <div class="block creative-container">
+        <div class="block element-1"></div>
+        <div class="block element-2"></div>
+        <div class="block element-3"></div>
+      </div>
+
+      <!-- Contenedor de elementos del scratch -->
+      <div class="block scratch-configuration">
+        <img
+          id="sourceImage"
+          src="300x600.jpg"
+          alt="Image reveal"
+          style="display: none"
+        />
+        <canvas id="scratch-canvas" width="300" height="600"></canvas>
+        <div class="block frame"></div>
+      </div>
+
+      <!-- Logo y CTA siempre visibles delante del resto de objetos -->
+      <div class="block logo"></div>
+      <div class="block cta"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

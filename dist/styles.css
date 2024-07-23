@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Banner Fixed styles DONT EDIT */
+.banner {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+}
+.block {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.creative-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Estilos solo del logo, CTA y background */
+.logo {
+  top: 20px;
+  left: 75px;
+  width: 150px;
+  height: 40px;
+  opacity: 1;
+  background-color: black;
+  background-image: url(logo.png);
+  cursor: pointer;
+}
+.cta {
+  bottom: 25px;
+  left: 100px;
+  width: 100px;
+  height: 45px;
+  background-image: url(cta.png);
+  cursor: pointer;
+}
+.banner-background {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 600px;
+  background-image: url(banner_bg.png);
+}
+/* Estilos de elementos del creative container
+   Este es el contenido revelado por el usuario haciendo scratch
+   .reveal añade los estilos de transicion al usuario al revelar un % del scratch
+*/
+.element-1 {
+  top: 120px;
+  left: 60px;
+  width: 180px;
+  height: 280px;
+  opacity: 0;
+  background: crimson;
+  transform: scale(0.8);
+  transition: all 1s;
+}
+.reveal .element-1 {
+  opacity: 1;
+  transform: scale(1);
+}
+.element-2 {
+  bottom: 120px;
+  left: 75px;
+  width: 150px;
+  height: 50px;
+  opacity: 0;
+  background-color: orange;
+  background-image: url(copy_1.png);
+  transition: all 0.8s;
+  transform: translate(100px, 0);
+}
+.reveal .element-2 {
+  opacity: 1;
+  transform: translate(0, 0);
+  /* Animacion en loop con delay que se ejecuta luego de la transicion */
+  animation: float 2s 1s ease-in-out infinite;
+}
+/* Esta animacion se añade a .reveal con un delay de 1s y en loop
+   para que se ejecute luego de la transicion. Para que esto funcione
+   y no haya conflictos con los transforms, debe usar la misma propiedad
+   en la transicion y la animacion.
+*/
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+}
+#scratch-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: auto;
+  max-width: 300px;
+}
+.frame {
+  width: 300px;
+  height: 600px;
+  background-image: url(marco.png);
+  transform: scale(1);
+  pointer-events: none;
+}

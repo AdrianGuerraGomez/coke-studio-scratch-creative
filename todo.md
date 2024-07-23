@@ -1,0 +1,1 @@
+- [ ] ADD init reset less , with touch active
